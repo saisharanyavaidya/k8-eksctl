@@ -1,0 +1,14 @@
+#k8 cluster creation
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: expense-1
+  region: us-east-1
+
+#managed node groups means AWS will manage node groups.. usually it manages only control plane
+managedNodeGroups:
+- name: expense
+  instanceType: m5.large
+  desiredCapacity: 3
+  spot: true #this is a spot instance
