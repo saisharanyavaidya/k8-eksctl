@@ -6,7 +6,7 @@ metadata:
   name: expense-1
   region: us-east-1
 
-#managed node groups means AWS will manage node groups.. usually it manages only control plane
+#managed node groups means AWS will manage node groups.. usually it manages only control plane, but here we mention to manage nodes as well
 managedNodeGroups:
 - name: expense
   instanceType: m5.large
